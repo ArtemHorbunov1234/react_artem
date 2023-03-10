@@ -1,0 +1,11 @@
+.profilcard{
+  border: solid 1px;
+  padding: 1rem;
+  width: fit-content;
+  font-size: 1.1rem;
+}
+
+.App{
+  display: flex;
+  gap: 1rem;
+}
