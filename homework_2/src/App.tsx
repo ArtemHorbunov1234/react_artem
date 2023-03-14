@@ -1,23 +1,17 @@
-type Person = {
+type NumbersProps = {
     num1: number;
     num2: number;
 };
 
-function NumbersDisplay({ num1, num2 }: Person) {
+function NumbersDisplay({ num1, num2 }: NumbersProps) {
     if (num1 > num2) {
         return <div className='border'>{num1}</div>;
-    } else if (num2 > num1) {
-        return <div className='border'>{num2}</div>;
     } else {
-        return (
-            <div className='border'>
-                {num1} {num2}
-            </div>
-        );
+        return <div className='border'>{num2}</div>;
     }
 }
 
-function NumbersArrow({ num1, num2 }: Person) {
+function NumbersArrow({ num1, num2 }: NumbersProps) {
     if (num1 > num2) {
         return (
             <div className='border'>
@@ -39,16 +33,28 @@ function NumbersArrow({ num1, num2 }: Person) {
     }
 }
 
-type Cardtitle = {
+type CardProps = {
     title: string;
     text: string;
 };
 
-function Card({ title, text }: Cardtitle) {
+type TextProps = {
+    text: string;
+};
+
+function Title({ text }: TextProps) {
+    return <h2>{text}</h2>;
+}
+
+function Text({ text }: TextProps) {
+    return <p>{text}</p>;
+}
+
+function Card({ title, text }: CardProps) {
     return (
         <div className='card-profil'>
-            <div>{title}</div>
-            <div className='textCard'>{text}</div>
+            <Title text={title} />
+            <Text text={text} />
         </div>
     );
 }
