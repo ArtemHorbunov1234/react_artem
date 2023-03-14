@@ -1,0 +1,14 @@
+.border {
+    border: solid 0.1rem;
+    width: fit-content;
+}
+
+.card-profil {
+    border: solid 0.1rem;
+    max-width: fit-content;
+    height: 200px;
+}
+
+.textCard {
+    max-width: 200px;
+}
