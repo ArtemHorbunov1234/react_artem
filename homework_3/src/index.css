@@ -1,0 +1,23 @@
+.btn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bnt-push {
+    width: 200px;
+}
+
+.border {
+    border: solid 1px;
+    width: fit-content;
+    padding: 12px;
+}
+
+button {
+    width: 150px;
+}
+
+.display {
+    text-align: center;
+}
