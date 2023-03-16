@@ -30,12 +30,11 @@ function GetDegree() {
         setDegree(0);
     }
 
-    function SumDegree() {
+    function sumDegree() {
         let a = 1;
-        while (degree > a) {
+        if (degree > a) {
             a++;
-            let b = number * number;
-            setSum(b);
+            setSum(number ** degree);
         }
         if (degree === 1) {
             setSum(number);
@@ -57,7 +56,7 @@ function GetDegree() {
                 <button onClick={decrement2}>Dec</button>
                 <button onClick={reset2}>Reset</button>
             </div>
-            <button className='bnt-push' onClick={SumDegree}>
+            <button className='bnt-push' onClick={sumDegree}>
                 push
             </button>
         </div>
