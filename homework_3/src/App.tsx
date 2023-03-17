@@ -41,13 +41,10 @@ function GetDegree() {
 
 function ClickMe() {
     const [number, setNumber] = useState(0);
-    function increment1() {
-        setNumber(number + 1);
-    }
 
     return (
         <div>
-            <button onClick={increment1}>{number}</button>
+            <button onClick={() => setNumber(number + 1)}>{number}</button>
         </div>
     );
 }
@@ -55,19 +52,17 @@ function ClickMe() {
 function SquareDisappears() {
     const [number, setNumber] = useState(0);
 
-    function squareHide() {
-        return <div className='square'></div>;
-    }
-
-    function squareSHOW() {
-        return <div></div>;
+    let square;
+    if (number === 1) {
+        square = <div className='square'>SQUARE</div>;
     }
 
     return (
         <div className='disappears'>
+            {square}
             <div>
-                <button onClick={squareHide}>HIDE</button>
-                <button onClick={squareSHOW}>SHOW</button>
+                <button onClick={() => setNumber(0)}>HIDE</button>
+                <button onClick={() => setNumber(1)}>SHOW</button>
             </div>
         </div>
     );
