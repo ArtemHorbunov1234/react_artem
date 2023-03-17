@@ -1,7 +1,7 @@
 import { useState } from 'react';
 function GetDegree() {
     const [number, setNumber] = useState(0);
-    const [degree, setDegree] = useState(0);
+    const [degree, setDegree] = useState(1);
     const [sum, setSum] = useState(0);
 
     function increment1() {
@@ -63,10 +63,48 @@ function GetDegree() {
     );
 }
 
+function ClickMe() {
+    const [number, setNumber] = useState(0);
+    function increment1() {
+        setNumber(number + 1);
+    }
+
+    return (
+        <div>
+            <button onClick={increment1}>{number}</button>
+        </div>
+    );
+}
+
+function SquareDisappears() {
+    const [number, setNumber] = useState(0);
+
+    function squareHide() {
+        return <div className='square'></div>;
+    }
+
+    function squareSHOW() {
+        return <div></div>;
+    }
+
+    return (
+        <div className='disappears'>
+            <div>
+                <button onClick={squareHide}>HIDE</button>
+                <button onClick={squareSHOW}>SHOW</button>
+            </div>
+        </div>
+    );
+}
+
 function App() {
     return (
-        <div className='border'>
+        <div>
             <GetDegree />
+            <div>
+                <ClickMe />
+            </div>
+            <SquareDisappears />
         </div>
     );
 }
