@@ -18,26 +18,13 @@ function OnChanges() {
     );
 }
 
-type InputPassword = {
-    type: 'text' | 'password';
-};
-
-function InvisiblePassword({ type }: InputPassword) {
-    const [login, setLogin] = useState('text');
-    const [password, setPassword] = useState('password');
-    const [button, setButton] = useState(0);
-    if (button === 0) {
-        setLogin(type);
-    } else if (button === 1) {
-        setPassword(type);
-    } else {
-        setButton(0);
-    }
+function InvisiblePassword() {
+    const [isShown, setShown] = useState(false);
 
     return (
         <div>
-            <input type={type} />
-            <button onClick={() => setButton(button + 1)}>SHOW</button>
+            <input type={isShown ? 'text' : 'password'} />
+            <button onClick={() => setShown(!isShown)}>Toggle</button>
         </div>
     );
 }
@@ -81,8 +68,7 @@ function Simple() {
 function App() {
     return (
         <div>
-            <OnChanges />
-            <Simple />
+            <InvisiblePassword />
         </div>
     );
 }
