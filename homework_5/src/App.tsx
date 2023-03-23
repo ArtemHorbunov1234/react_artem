@@ -50,10 +50,54 @@ function InputAlert() {
     );
 }
 
+function InputRegistration() {
+    const [inputLog, setInputLog] = useState('');
+    const [inputPas, setInputPas] = useState('');
+    const [passCheck, setPassCheck] = useState('');
+    const [passHide, setPassHide] = useState(false);
+    const [checkHide, setCheckHide] = useState(false);
+
+    function inputCheck() {
+        if (inputPas === passCheck && inputPas.length >= 8) {
+            console.log(`Login = ${inputLog}`);
+            console.log(`Password = ${inputPas}`);
+        } else if (inputPas !== passCheck && inputPas.length >= 8) {
+            alert('Passwords do not match');
+        } else {
+            alert('password must be more than 8 characters long');
+        }
+    }
+
+    return (
+        <div>
+            <p>login</p>
+            <input type='text' value={inputLog} onChange={e => setInputLog(e.target.value)} />
+            <p>Password</p>
+
+            <input
+                type={!checkHide ? 'password' : 'text'}
+                value={inputPas}
+                onChange={e => setInputPas(e.target.value)}
+            />
+            <button onClick={() => setCheckHide(!checkHide)}>Check</button>
+            <p>Repeat Password</p>
+            <input
+                type={!passHide ? 'password' : 'text'}
+                value={passCheck}
+                onChange={e => setPassCheck(e.target.value)}
+            />
+            <button onClick={() => setPassHide(!passHide)}>Check</button>
+            <div>
+                <button onClick={() => inputCheck()}>Registration</button>
+            </div>
+        </div>
+    );
+}
+
 function App() {
     return (
         <div className='App'>
-            <InputAlert />
+            <InputRegistration />
         </div>
     );
 }
