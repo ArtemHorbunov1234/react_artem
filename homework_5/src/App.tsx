@@ -15,8 +15,11 @@ function InputOutput() {
     const [inputLog, setInputLog] = useState('');
     const [inputPas, setInputPas] = useState('');
     function inputConsol() {
-        console.log(`login : ${inputLog}`);
-        console.log(`Password : ${inputPas}`);
+        const credentials = {
+            login: inputLog,
+            password: inputPas,
+        };
+        console.log(credentials);
     }
     return (
         <div className='flex'>
@@ -30,11 +33,11 @@ function InputOutput() {
 }
 
 function InputAlert() {
-    const [inputLog, setInputLog] = useState('');
     const [inputPas, setInputPas] = useState('');
+    const [inputPassConfirm, setInputPassConfirm] = useState('');
     function inputCheck() {
-        if (inputLog === inputPas) {
-            console.log(`Password = ${inputLog}`);
+        if (inputPassConfirm === inputPas) {
+            console.log(`Password = ${inputPassConfirm}`);
         } else {
             alert('Error');
         }
@@ -42,7 +45,7 @@ function InputAlert() {
     return (
         <div>
             <p>login</p>
-            <input type='password' value={inputLog} onChange={e => setInputLog(e.target.value)} />
+            <input type='password' value={inputPassConfirm} onChange={e => setInputPassConfirm(e.target.value)} />
             <p>Password</p>
             <input type='password' value={inputPas} onChange={e => setInputPas(e.target.value)} />
             <button onClick={() => inputCheck()}>Check</button>
