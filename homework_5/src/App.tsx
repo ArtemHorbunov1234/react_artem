@@ -69,11 +69,10 @@ function InputRegistration() {
     }
 
     return (
-        <div>
+        <div className='registration'>
             <p>login</p>
             <input type='text' value={inputLog} onChange={e => setInputLog(e.target.value)} />
             <p>Password</p>
-
             <input
                 type={!checkHide ? 'password' : 'text'}
                 value={inputPas}
@@ -88,7 +87,9 @@ function InputRegistration() {
             />
             <button onClick={() => setPassHide(!passHide)}>Check</button>
             <div>
-                <button onClick={() => inputCheck()}>Registration</button>
+                <button className='btn--push' onClick={() => inputCheck()}>
+                    Registration
+                </button>
             </div>
         </div>
     );
