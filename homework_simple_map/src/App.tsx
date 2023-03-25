@@ -18,7 +18,16 @@ function App() {
         },
     ];
 
-    return <div className='App'></div>;
+    return (
+        <div className='App'>
+            {people.map((person, index) => (
+                <div className='person' key={index}>
+                    <p>name : {person.name}</p>
+                    <p>age : {person.age}</p>
+                </div>
+            ))}
+        </div>
+    );
 }
 
 export default App;

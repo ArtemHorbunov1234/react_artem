@@ -1,0 +1,7 @@
+.person {
+    border: solid 1px;
+    width: 120px;
+    height: 90px;
+    padding: 2px 4px;
+    border-radius: 10px;
+}
