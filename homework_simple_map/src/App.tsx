@@ -61,7 +61,7 @@ console.log(sumNumber);
 console.log(sumNumber);
 const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-function isPrime(number: num) {
+function isPrime(number: number) {
     for (let i = 2; number > i; i++) {
         console.log(number);
         if (number % i === 0) {
