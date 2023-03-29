@@ -11,7 +11,7 @@ function InputPushText() {
         <div>
             <input type='text' value={names} onChange={e => setName([e.target.value])} />
             <button onClick={() => inputPush()}>Push</button>
-            {save}
+            <p>{save}</p>
         </div>
     );
 }
