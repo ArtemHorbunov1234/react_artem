@@ -75,10 +75,88 @@ function Simple() {
     );
 }
 
+function Array() {
+    const [numbers, setNumbers] = useState<number[]>([]);
+
+    return (
+        <div>
+            <div>{JSON.stringify(numbers)}</div>
+            <button onClick={() => setNumbers([...numbers, numbers.length])}>Click</button>
+        </div>
+    );
+}
+
+type Person = {
+    name: string;
+    age: number;
+    sex: 'male' | 'female';
+};
+
+function Object() {
+    const [person, setPerson] = useState<Person>({
+        name: 'Artem',
+        age: 21,
+        sex: 'male',
+    });
+
+    function getNewAgeValue(newAgeString: string) {
+        const newAge = Number(newAgeString);
+        if (isNaN(newAge)) {
+            return person.age;
+        }
+        return newAge;
+    }
+
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '200px', gap: '10px' }}>
+            <label>
+                Name
+                <input
+                    type='text'
+                    value={person.name}
+                    onChange={event =>
+                        setPerson({
+                            ...person,
+                            name: event.target.value,
+                        })
+                    }
+                />
+            </label>
+            <label>
+                Age
+                <input
+                    type='text'
+                    value={person.age}
+                    onChange={event =>
+                        setPerson({
+                            ...person,
+                            age: getNewAgeValue(event.target.value),
+                        })
+                    }
+                />
+            </label>
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    maxWidth: '200px',
+                    gap: '10px',
+                    border: 'solid 1px black',
+                    padding: '1rem',
+                }}
+            >
+                <div>{person.name}</div>
+                <div>{person.age}</div>
+            </div>
+        </div>
+    );
+}
+
 function App() {
     return (
         <div>
-            <Form />
+            <Array />
+            <Object />
         </div>
     );
 }
