@@ -6,9 +6,6 @@ function CalculationsMoney() {
     const [total, setTotal] = useState(0);
     function totalCalculation() {
         setTotal((money * percent * year) / 100);
-        if (percent === 0 && year === 0) {
-            setTotal(money);
-        }
     }
     return (
         <div className='header'>
@@ -24,11 +21,12 @@ function CalculationsMoney() {
                 Number of years:
                 <input type='number' value={year} onChange={e => setYear(Number(e.target.value))} />
             </label>
+
+            <button onClick={() => totalCalculation()}>Calculation</button>
             <label>
                 Total:
                 <input type='number' value={total} onChange={e => setTotal(Number(e.target.value))} />
             </label>
-            <button onClick={() => totalCalculation()}>Calculation</button>
         </div>
     );
 }
