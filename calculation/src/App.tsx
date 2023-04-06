@@ -5,10 +5,10 @@ function CalculationsMoney() {
     const [year, setYear] = useState(0);
     const [total, setTotal] = useState(0);
     function totalCalculation() {
-        if (percent === 0) {
-            setPercent(money);
-        }
         setTotal((money * percent * year) / 100);
+        if (percent === 0 && year === 0) {
+            setTotal(money);
+        }
     }
     return (
         <div className='header'>
