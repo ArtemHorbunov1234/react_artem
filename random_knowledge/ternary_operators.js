@@ -12,3 +12,8 @@ if (age >= 18) {
 }
 
 const categoryConst = age >= 18 ? 'ADULT' : withParent ? 'WITH_PARENT' : 'UNDERAGE';
+
+// #######################################
+
+const a = null;
+const b = a === null ? 0 : a;
