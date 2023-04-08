@@ -30,6 +30,7 @@ body {
     min-width: 320px;
     min-height: 100vh;
     justify-content: center;
+    background-color: #8c83ab;
 }
 
 h1 {
@@ -74,6 +75,13 @@ button:focus-visible {
     flex-direction: column;
     gap: 5px;
     border: solid 1px;
-    padding: 15px;
+    padding: 45px;
     border-radius: 6px;
+    background-color: #c5b4e7;
+}
+
+.header--text {
+    font-weight: 700;
+    display: flex;
+    gap: 20px;
 }

@@ -4,7 +4,7 @@ function CalculationsCalorie() {
     const [protein, setProtein] = useState(0);
     const [fat, setFat] = useState(0);
     const [carbs, setCarbs] = useState(0);
-    const [totalProtein, setTotalProtein] = useState<Number>(0);
+    const [totalProtein, setTotalProtein] = useState(0);
     const [totalFat, setTotalFat] = useState(0);
     const [totalCarbs, setTotalCarbs] = useState(0);
     function totalCalculation() {
@@ -14,21 +14,21 @@ function CalculationsCalorie() {
     }
     return (
         <div className='header'>
-            <label>
-                scalorie:
+            <label className='header--text'>
+                Pcalorie:
                 <input type='number' value={calorie} onChange={e => setCalorie(Number(e.target.value))} />%
             </label>
-            <label>
-                protein:{totalProtein}
+            <label className='header--text'>
+                Protein:{totalProtein}grams
                 <input type='number' value={protein} onChange={e => setProtein(Number(e.target.value))} />%
             </label>
-            <label>
-                fat:{totalFat}
+            <label className='header--text'>
+                Fat:{totalFat}grams
                 <input type='number' value={fat} onChange={e => setFat(Number(e.target.value))} />%
             </label>
 
-            <label>
-                carbs:{totalCarbs}
+            <label className='header--text'>
+                Carbs:{totalCarbs}grams
                 <input type='number' value={carbs} onChange={e => setCarbs(Number(e.target.value))} />%
             </label>
             <button onClick={() => totalCalculation()}>Calculation</button>
