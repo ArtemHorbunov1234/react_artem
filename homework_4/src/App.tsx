@@ -24,6 +24,7 @@ function InvisiblePassword() {
     return (
         <div>
             <input type={isShown ? 'text' : 'password'} />
+
             <button onClick={() => setShown(!isShown)}>Toggle</button>
         </div>
     );
