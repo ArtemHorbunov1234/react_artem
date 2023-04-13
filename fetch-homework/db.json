@@ -1,1 +1,46 @@
-{}
+{
+  "posts": [
+    {
+      "title": "Apple iPhone 12",
+      "price": 29499,
+      "url": "https://content2.rozetka.com.ua/goods/images/big/30872894.jpg",
+      "id": 4
+    },
+    {
+      "title": " iPhone 14",
+      "price": 35999,
+      "url": "https://content2.rozetka.com.ua/goods/images/big/284913536.jpg",
+      "id": 5
+    },
+    {
+      "title": " Apple iPhone 14 Pro",
+      "price": 54999,
+      "url": "https://content2.rozetka.com.ua/goods/images/big/284920770.jpg",
+      "id": 6
+    },
+    {
+      "title": "Apple iPhone 13",
+      "price": 31499,
+      "url": "https://content2.rozetka.com.ua/goods/images/big/221214151.jpg",
+      "id": 7
+    },
+    {
+      "title": "Apple iPhone 13 ",
+      "price": 36499,
+      "url": "https://content.rozetka.com.ua/goods/images/big/259416456.jpg",
+      "id": 8
+    },
+    {
+      "title": "iPhone 14 Pro Max",
+      "price": 59999,
+      "url": "https://content2.rozetka.com.ua/goods/images/big/284920909.jpg",
+      "id": 9
+    },
+    {
+      "title": "Apple iPhone 14 Plus",
+      "price": 40999,
+      "url": "https://content2.rozetka.com.ua/goods/images/big/284984112.jpg",
+      "id": 10
+    }
+  ]
+}
