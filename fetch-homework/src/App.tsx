@@ -136,13 +136,8 @@ function PostList() {
                     <button className='post--btn' onClick={() => deleteMutation.mutate(post.id)}>
                         Del
                     </button>
-                    {comments.map(comment => (
-                        <div key={comment.id}>
-                            <div>{comment.comment}</div>
-                        </div>
-                    ))}
+
                     <textarea
-                        value={post.id}
                         placeholder='Comment'
                         className='post__comment'
                         onChange={e => setComment(e.target.value)}
