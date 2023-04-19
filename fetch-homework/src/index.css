@@ -13,7 +13,7 @@ body {
     width: 200px;
     border-radius: 23px;
     border: solid 1px transparent;
-    /* box-sizing: border-box; */
+    height: 250px;
 }
 
 .post--input {
@@ -43,4 +43,12 @@ body {
 .post_btn--push {
     border-radius: 6px;
     cursor: pointer;
+}
+
+.post__comment {
+    display: block;
+    height: 60px;
+    width: 200px;
+    resize: none;
+    border-radius: 5px;
 }
