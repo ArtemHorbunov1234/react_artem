@@ -23,10 +23,22 @@ function InputPost() {
         });
     }
 
+    function inputText() {
+        if (post.length > 3 && post.length <= 28) {
+            createMutation.mutate();
+        } else if (post.length <= 3) {
+            alert('The text must be longer than 3 letters');
+        } else if (post.length >= 28) {
+            alert('The length cannot be more than 28 letters long');
+        }
+    }
+
     return (
         <div>
-            <input type='text' value={post} onChange={e => setPost(e.target.value)} />
-            <button onClick={() => createMutation.mutate()}>Push</button>
+            <input type='text' placeholder='text...' value={post} onChange={e => setPost(e.target.value)} />
+            <button className='btn__input' onClick={() => inputText()}>
+                Push
+            </button>
         </div>
     );
 }
@@ -56,7 +68,7 @@ function PostComment() {
     return (
         <div>
             {posts.map(post => (
-                <div key={post.id}>
+                <div key={post.id} className='post-text'>
                     <div>{post.post}</div>
                     <button onClick={() => deleteMutation.mutate(post.id)}>Delete</button>
                 </div>
@@ -67,6 +79,7 @@ function PostComment() {
 function App() {
     return (
         <div className='App'>
+            <h1 className='header-text'>Notes</h1>
             <InputPost />
             <PostComment />
         </div>
