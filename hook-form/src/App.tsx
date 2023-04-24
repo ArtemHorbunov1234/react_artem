@@ -20,6 +20,8 @@ function FormInput() {
         <form onSubmit={handleSubmit(onSubmit)} className='input-registration '>
             <label>Email:</label>
             <input {...register('example')} placeholder='Email' minLength={6} />
+            {errors.example && <span>Fill in the email field</span>}
+
             <label>Password:</label>
 
             <input
@@ -32,9 +34,9 @@ function FormInput() {
                 SHOW
             </button>
 
-            {errors.exampleRequired && <span>You need to fill in the field</span>}
+            {errors.exampleRequired && <span>Fill in the password field</span>}
 
-            <input type='submit' />
+            <button type='submit'> Push</button>
         </form>
     );
 }
