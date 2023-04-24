@@ -40,19 +40,34 @@ function AddPost() {
         <div className='post--input'>
             <label>
                 Title:
-                <input type='text' value={title} onChange={e => setTitle(e.target.value)} />
+                <input type='text' value={title} placeholder='Title text..' onChange={e => setTitle(e.target.value)} />
             </label>
             <label>
                 Price:
-                <input type='number' value={price} onChange={e => setPrice(convertString(e.target.value))} />
+                <input
+                    type='number'
+                    value={price}
+                    placeholder='1000...'
+                    onChange={e => setPrice(convertString(e.target.value))}
+                />
             </label>
             <label>
                 Url:
-                <input type='text' value={img} onChange={e => setImg(e.target.value)} />
+                <input type='text' value={img} placeholder='https://' onChange={e => setImg(e.target.value)} />
             </label>
             <button className='post_btn--push' onClick={() => createMutation.mutate()}>
                 Push
             </button>
+            <div>
+                <details>
+                    <p className='info-text'>The first field is the title of your post</p>
+                    <p className='info-text'> The second field is the price of your product </p>
+                    <p className='info-text'>
+                        The third field is the url address of the product you want to put in the post
+                    </p>
+                    <summary>Info</summary>
+                </details>
+            </div>
         </div>
     );
 }

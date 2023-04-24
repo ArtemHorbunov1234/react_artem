@@ -23,6 +23,11 @@ body {
     width: 50px;
     margin-inline: auto;
     margin-top: 3rem;
+    position: fixed;
+}
+
+.info-text {
+    width: 160px;
 }
 
 .post--btn {
@@ -43,6 +48,8 @@ body {
 .post_btn--push {
     border-radius: 6px;
     cursor: pointer;
+    letter-spacing: 5px;
+    width: fit-content;
 }
 
 .post__comment {
