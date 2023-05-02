@@ -8,31 +8,23 @@ class Person {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-        this.number = 5;
-    }
-
-    checkCode(number: number) {
-        if (number === this.number) {
-            return true;
-        } else {
-            return false;
-        }
+        this.number = number;
     }
 
     printInfo() {
         console.log(`name: ${this.name}, lastName: ${this.lastName}, age: ${this.age}, number: ${this.number}`);
     }
 
-    checkInfo() {
-        if (this.age > 0 && this.age <= 100 && this.name.length > 0) {
-            console.log(`name: ${this.name}, lastName: ${this.lastName}, age: ${this.age}, number: ${this.number}`);
+    checkCode(number: number) {
+        if (number === this.number && this.age > 0 && this.age <= 100 && this.name.length > 0) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
 const rectangle = new Person('Artem', 'Horbunov', 23, 5);
 rectangle.printInfo();
-const rectangle1 = new Person('Artem', 'Horbunov', 23, 6);
+const rectangle1 = new Person('Artem', 'Horbunov', 1, 7);
+console.log(rectangle1.checkCode(7));
 rectangle1.age = 75;
-rectangle1.checkInfo();
-
-console.log(rectangle1.checkCode(5));
