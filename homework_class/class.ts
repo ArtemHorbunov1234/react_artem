@@ -24,7 +24,7 @@ class Person {
     }
 }
 const rectangle = new Person('Artem', 'Horbunov', 23, 5);
+rectangle.age = 75;
 rectangle.printInfo();
 const rectangle1 = new Person('Artem', 'Horbunov', 1, 7);
 console.log(rectangle1.checkCode(7));
-rectangle1.age = 75;
