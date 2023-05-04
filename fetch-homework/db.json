@@ -40,12 +40,6 @@
       "title": "Apple iPhone 12",
       "price": 30000,
       "url": "https://content.rozetka.com.ua/goods/images/big/259416456.jpg",
-      "id": 8
-    },
-    {
-      "title": "Apple iPhone 12",
-      "price": 30000,
-      "url": "https://content.rozetka.com.ua/goods/images/big/259416456.jpg",
       "id": 10
     },
     {
@@ -65,18 +59,6 @@
       "price": 29499,
       "url": "https://content2.rozetka.com.ua/goods/images/big/30872894.jpg",
       "id": 16
-    },
-    {
-      "title": "Apple iPhone 12",
-      "price": 29499,
-      "url": "https://content2.rozetka.com.ua/goods/images/big/30872894.jpg",
-      "id": 17
-    },
-    {
-      "title": "Apple iPhone 12",
-      "price": 29499,
-      "url": "https://content2.rozetka.com.ua/goods/images/big/30872894.jpg",
-      "id": 20
     }
   ],
   "comments": [
@@ -119,6 +101,18 @@
     {
       "comment": "432234",
       "id": 30
+    },
+    {
+      "comment": "dfssd",
+      "id": 31
+    },
+    {
+      "comment": "dfssd",
+      "id": 32
+    },
+    {
+      "comment": "dfssd",
+      "id": 33
     }
   ]
 }
